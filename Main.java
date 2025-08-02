@@ -17,7 +17,7 @@ public class Main {
 
                 switch (choice) {
                     case 1:
-                        calculateBill();
+                        CalculateBill.execute();
                         break;
                     case 2:
                         System.out.println("Thank You!");
@@ -32,41 +32,5 @@ public class Main {
                 scanner.nextLine(); // Clear invalid input
             }
         }
-    }
-
-    private static void calculateBill() {
-        Scanner scanner = new Scanner(System.in);
-
-        try {
-            System.out.print("Enter the number of units consumed: ");
-            int units = scanner.nextInt();
-
-            if (units < 0) {
-                throw new IllegalArgumentException("Units consumed cannot be negative.");
-            }
-
-            double totalAmount = calculateTotalAmount(units);
-
-            System.out.println("Electricity Bill Calculation:");
-            System.out.println("Units Consumed: " + units);
-            System.out.println("Total Amount (INR): " + totalAmount);
-        } catch (InputMismatchException e) {
-            System.out.println("Invalid input. Please enter a valid number.");
-            scanner.nextLine(); // Clear invalid input
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private static double calculateTotalAmount(int units) {
-        double totalAmount;
-        if (units <= 100) {
-            totalAmount = units * 1.20;
-        } else if (units <= 300) {
-            totalAmount = 100 * 1.20 + (units - 100) * 2.00;
-        } else {
-            totalAmount = 100 * 1.20 + 200 * 2.00 + (units - 300) * 3.00;
-        }
-        return totalAmount;
     }
 }
