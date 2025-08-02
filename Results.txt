@@ -1,0 +1,22 @@
+Electricity Bill Calculator
+1. Calculate Bill
+2. Exit
+Enter your choice (1/2): 1
+Enter the number of units consumed: 150
+Electricity Bill Calculation:
+Units Consumed: 150
+Total Amount (INR): 190.0
+
+
+Electricity Bill Calculator
+1. Calculate Bill
+2. Exit
+Enter your choice (1/2): 1
+Enter the number of units consumed: -50
+Units consumed cannot be negative.
+
+Electricity Bill Calculator
+1. Calculate Bill
+2. Exit
+Enter your choice (1/2): 2
+Thank You!
